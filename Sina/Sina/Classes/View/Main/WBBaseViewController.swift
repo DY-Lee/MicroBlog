@@ -12,7 +12,7 @@ class WBBaseViewController: UIViewController {
     
     //自定义导航条
     lazy var navigationBar = UINavigationBar(frame: CGRectMake(0,0,UIScreen.cz_screenWidth(),64))
-    //自定义
+
     lazy var navitem = UINavigationItem()
     
     override var title: String? {
