@@ -15,7 +15,7 @@
 
 + (instancetype)cz_textButton:(NSString *)title fontSize:(CGFloat)fontSize normalColor:(UIColor *)normalColor highlightedColor:(UIColor *)highlightedColor backgroundImageName:(NSString *)backgroundImageName {
     
-    UIButton *button = [[self alloc] init];
+    UIButton *button = [self buttonWithType:UIButtonTypeCustom];
     
     [button setTitle:title forState:UIControlStateNormal];
     

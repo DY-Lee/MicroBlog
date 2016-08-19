@@ -11,6 +11,7 @@
 		040209641D6167AD00155114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040209631D6167AD00155114 /* Assets.xcassets */; };
 		040209721D6167AD00155114 /* SinaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040209711D6167AD00155114 /* SinaTests.swift */; };
 		0402097D1D6167AD00155114 /* SinaUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402097C1D6167AD00155114 /* SinaUITests.swift */; };
+		0412C6411D66E1F900C1F87F /* WBDemoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0412C6401D66E1F900C1F87F /* WBDemoViewController.swift */; };
 		0428C9091D64799400D2E597 /* WBMainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428C9081D64799400D2E597 /* WBMainViewController.swift */; };
 		0428C90B1D6479F900D2E597 /* WBNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428C90A1D6479F900D2E597 /* WBNavigationController.swift */; };
 		0428C90D1D647A2B00D2E597 /* WBBaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428C90C1D647A2B00D2E597 /* WBBaseViewController.swift */; };
@@ -31,7 +32,7 @@
 		0428C93A1D6482A600D2E597 /* UIView+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0428C92D1D6482A600D2E597 /* UIView+CZAddition.m */; };
 		0428C93B1D6482A600D2E597 /* UIViewController+CZAddition.m in Sources */ = {isa = PBXBuildFile; fileRef = 0428C92F1D6482A600D2E597 /* UIViewController+CZAddition.m */; };
 		0428C9401D648CED00D2E597 /* Bundle+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0428C93E1D648CED00D2E597 /* Bundle+Extensions.swift */; };
-		04F1C1421D65D70900D104D6 /* WBHomeTextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04F1C1411D65D70900D104D6 /* WBHomeTextViewController.swift */; };
+		04AA84A51D66FFF1006226F7 /* UIBarButtonItem+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04AA84A41D66FFF1006226F7 /* UIBarButtonItem+Extensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -62,6 +63,7 @@
 		040209781D6167AD00155114 /* SinaUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SinaUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		0402097C1D6167AD00155114 /* SinaUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SinaUITests.swift; sourceTree = "<group>"; };
 		0402097E1D6167AD00155114 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0412C6401D66E1F900C1F87F /* WBDemoViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBDemoViewController.swift; sourceTree = "<group>"; };
 		0428C9081D64799400D2E597 /* WBMainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBMainViewController.swift; sourceTree = "<group>"; };
 		0428C90A1D6479F900D2E597 /* WBNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBNavigationController.swift; sourceTree = "<group>"; };
 		0428C90C1D647A2B00D2E597 /* WBBaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBBaseViewController.swift; sourceTree = "<group>"; };
@@ -96,7 +98,7 @@
 		0428C92F1D6482A600D2E597 /* UIViewController+CZAddition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+CZAddition.m"; sourceTree = "<group>"; };
 		0428C93C1D6482DF00D2E597 /* weibo-Bridge.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "weibo-Bridge.h"; sourceTree = "<group>"; };
 		0428C93E1D648CED00D2E597 /* Bundle+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Bundle+Extensions.swift"; sourceTree = "<group>"; };
-		04F1C1411D65D70900D104D6 /* WBHomeTextViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBHomeTextViewController.swift; sourceTree = "<group>"; };
+		04AA84A41D66FFF1006226F7 /* UIBarButtonItem+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIBarButtonItem+Extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -204,7 +206,7 @@
 		0428C9011D6478E500D2E597 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				04F1C1411D65D70900D104D6 /* WBHomeTextViewController.swift */,
+				0412C6401D66E1F900C1F87F /* WBDemoViewController.swift */,
 				0428C9041D6478E500D2E597 /* Main */,
 				0428C9031D6478E500D2E597 /* Home */,
 				0428C9051D6478E500D2E597 /* Message */,
@@ -299,6 +301,7 @@
 			isa = PBXGroup;
 			children = (
 				0428C93E1D648CED00D2E597 /* Bundle+Extensions.swift */,
+				04AA84A41D66FFF1006226F7 /* UIBarButtonItem+Extensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -434,6 +437,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0428C9371D6482A600D2E597 /* UIColor+CZAddition.m in Sources */,
+				04AA84A51D66FFF1006226F7 /* UIBarButtonItem+Extensions.swift in Sources */,
 				0428C9301D6482A600D2E597 /* NSArray+Log.m in Sources */,
 				0428C90D1D647A2B00D2E597 /* WBBaseViewController.swift in Sources */,
 				0428C9381D6482A600D2E597 /* UILabel+CZAddition.m in Sources */,
@@ -441,6 +445,7 @@
 				0428C93B1D6482A600D2E597 /* UIViewController+CZAddition.m in Sources */,
 				0428C9401D648CED00D2E597 /* Bundle+Extensions.swift in Sources */,
 				0428C9331D6482A600D2E597 /* NSString+CZBase64.m in Sources */,
+				0412C6411D66E1F900C1F87F /* WBDemoViewController.swift in Sources */,
 				0428C9151D647AAB00D2E597 /* WBProfileViewController.swift in Sources */,
 				0428C9131D647AA100D2E597 /* WBDiscoverViewController.swift in Sources */,
 				0428C9091D64799400D2E597 /* WBMainViewController.swift in Sources */,
@@ -452,7 +457,6 @@
 				0428C90B1D6479F900D2E597 /* WBNavigationController.swift in Sources */,
 				0428C9351D6482A600D2E597 /* NSString+CZPath.m in Sources */,
 				0428C93A1D6482A600D2E597 /* UIView+CZAddition.m in Sources */,
-				04F1C1421D65D70900D104D6 /* WBHomeTextViewController.swift in Sources */,
 				0428C9341D6482A600D2E597 /* NSString+CZHash.m in Sources */,
 				0428C9111D647A9700D2E597 /* WBMessageViewController.swift in Sources */,
 			);

@@ -52,6 +52,7 @@ extension WBMainViewController {
         }
         viewControllers = arrayM
     }
+    
     //取得字典内容
     private func controller(dict: [String :String])->UIViewController{
         //取得字典内容
@@ -71,7 +72,7 @@ extension WBMainViewController {
         //设置 tabbar 颜色、字体
         vc.tabBarItem.setTitleTextAttributes(
             [NSForegroundColorAttributeName:UIColor.orangeColor()],
-            forState: .Highlighted)
+            forState: .Selected)
         
         vc.tabBarItem.setTitleTextAttributes(
             [NSFontAttributeName:UIFont.systemFontOfSize(13)],

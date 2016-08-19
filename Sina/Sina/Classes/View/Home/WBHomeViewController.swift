@@ -13,15 +13,17 @@ class WBHomeViewController: WBBaseViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        // Do any additional setup after loading the view.
     }
      @objc private func showFriends() {
-        navigationController?.pushViewController(WBHomeTextViewController(), animated: true)
+        let vc = WBDemoViewController()
+        vc.hidesBottomBarWhenPushed = true
+        navigationController?.pushViewController(vc, animated: true)
     }
 }
 extension WBHomeViewController {
     override func setUpUI() {
         super.setUpUI()
-        navigationItem.leftBarButtonItem = UIBarButtonItem(title: "好友", style: .Plain, target: self, action: #selector(showFriends))
+        //系统方法高亮无法显示该效果
+        navitem.leftBarButtonItem = UIBarButtonItem(title:"好友",target:self,action:#selector(showFriends)) ;
     }
 }
