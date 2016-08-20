@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0401453B1D6874AE0017A4AD /* WBVistorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0401453A1D6874AE0017A4AD /* WBVistorView.swift */; };
 		0402095D1D6167AD00155114 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0402095C1D6167AD00155114 /* AppDelegate.swift */; };
 		040209641D6167AD00155114 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 040209631D6167AD00155114 /* Assets.xcassets */; };
 		040209721D6167AD00155114 /* SinaTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 040209711D6167AD00155114 /* SinaTests.swift */; };
@@ -53,6 +54,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0401453A1D6874AE0017A4AD /* WBVistorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WBVistorView.swift; sourceTree = "<group>"; };
 		040209591D6167AD00155114 /* Sina.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Sina.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0402095C1D6167AD00155114 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		040209631D6167AD00155114 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -133,6 +135,15 @@
 				0428C90A1D6479F900D2E597 /* WBNavigationController.swift */,
 			);
 			name = "主控制器";
+			sourceTree = "<group>";
+		};
+		040145391D68747B0017A4AD /* Vistor */ = {
+			isa = PBXGroup;
+			children = (
+				0401453A1D6874AE0017A4AD /* WBVistorView.swift */,
+			);
+			name = Vistor;
+			path = "未命名文件夹";
 			sourceTree = "<group>";
 		};
 		040209501D6167AD00155114 = {
@@ -244,6 +255,7 @@
 		0428C9041D6478E500D2E597 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				040145391D68747B0017A4AD /* Vistor */,
 				040144BA1D67E8530017A4AD /* 主控制器 */,
 				0428C90C1D647A2B00D2E597 /* WBBaseViewController.swift */,
 			);
@@ -444,6 +456,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0401453B1D6874AE0017A4AD /* WBVistorView.swift in Sources */,
 				0428C9371D6482A600D2E597 /* UIColor+CZAddition.m in Sources */,
 				04AA84A51D66FFF1006226F7 /* UIBarButtonItem+Extensions.swift in Sources */,
 				0428C9301D6482A600D2E597 /* NSArray+Log.m in Sources */,
