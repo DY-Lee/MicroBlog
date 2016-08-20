@@ -9,7 +9,7 @@
 import UIKit
 
 class WBMainViewController: UITabBarController {
-
+    
     private lazy var composeButton = UIButton.cz_imageButton("tabbar_compose_icon_add", backgroundImageName: "tabbar_compose_button")
     
     override func viewDidLoad() {
@@ -17,6 +17,12 @@ class WBMainViewController: UITabBarController {
         setupChildControllers()
         setUpComposeButton()
     }
+    //Portrait  竖屏
+    //Landscape 横屏
+    override func supportedInterfaceOrientations() -> UIInterfaceOrientationMask {
+        return .Portrait
+    }
+    
     //点击事件
     //private 保证方法私有，仅在当前对象访问
     //@objc 允许这个函数在运行时 通过 oc的消息机制被调用 ,如果不加上的话，会报错
