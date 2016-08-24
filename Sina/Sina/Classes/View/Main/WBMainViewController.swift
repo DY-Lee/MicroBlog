@@ -46,6 +46,7 @@ extension WBMainViewController {
         composeButton.frame = tabBar.bounds.insetBy(dx: 2 * w, dy: 0)       //将button放在中间
         composeButton.addTarget(self, action: #selector(WBMainViewController.editBlogAction), forControlEvents: .TouchUpInside)
     }
+    //
     private func setupChildControllers() {
         let array = [["clsName":"WBHomeViewController" ,"title":"首页" ,"imageName":"home"],
                      ["clsName":"WBMessageViewController" ,"title":"消息" ,"imageName":"message_center"],
@@ -65,6 +66,7 @@ extension WBMainViewController {
         guard let clsName = dict["clsName"] ,
                     title = dict["title"] ,
                     imageName = dict["imageName"],
+            
                     cls = NSClassFromString(NSBundle.mainBundle().namespace + "." + clsName) as? UIViewController.Type
             else {
                 return UIViewController()

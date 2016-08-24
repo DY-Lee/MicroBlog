@@ -9,6 +9,10 @@
 import UIKit
 
 class WBBaseViewController: UIViewController {
+    
+    //访客视图信息
+    var visitorInfoDic : [String:String]?
+    
     var tableView : UITableView?
     //登陆状态的标记
     var isLogon = false
@@ -42,9 +46,11 @@ extension WBBaseViewController{
         setUpNavigationBar()
         isLogon ? setUpTableView() : setUpVisitorView()
     }
-    //未登陆界面
+    //未登陆界面(游客界面)
     private func setUpVisitorView(){
         let visitorView = WBVistorView(frame: view.frame)
+        //视图信息
+        visitorView.infoDict = visitorInfoDic
         view.insertSubview(visitorView, belowSubview: navigationBar)
     }
     func setUpTableView(){
@@ -52,9 +58,9 @@ extension WBBaseViewController{
         tableView?.dataSource = self
         tableView?.delegate = self
         tableView?.contentInset = UIEdgeInsets(top: 0,
-                                                                               left: 0,
-                                                                               bottom: (tabBarController?.tabBar.frame.size.height)! + 64,
-                                                                               right: 0)
+                                                                       left: 0,
+                                                                       bottom: (tabBarController?.tabBar.frame.size.height)! + 64,
+                                                                       right: 0)
         view.addSubview(tableView!)
 
         //刷新控件
