@@ -17,11 +17,16 @@ class WBVistorView: UIView {
                            message = infoDict?["message"] else {
                                 return
             }
+            //首页直接返回
             tipLabel.text = message
             if imageName == "" {
                 return
             }
+            //其他视图不需要小房子／背景阴影
             houseIconView.image = UIImage(named: imageName)
+            maskIconView.hidden = true
+            iconView.hidden = true
+            tipLabel.textAlignment = .Center
         }
     }
     
@@ -32,7 +37,7 @@ class WBVistorView: UIView {
     //小房子
    private lazy var houseIconView:UIImageView = UIImageView(image: UIImage(named: "visitordiscover_feed_image_house"))
     //提示标签
-   private lazy var tipLabel:UILabel = UILabel.cz_labelWithText("关注一些人,回这里看看有什么惊喜,关注一些人,回这里看看有什么惊喜",
+   private lazy var tipLabel:UILabel = UILabel.cz_labelWithText("",
                                                                 fontSize: 14,
                                                                 color: UIColor.darkGrayColor())
     //注册按钮
@@ -51,6 +56,7 @@ class WBVistorView: UIView {
     override init(frame: CGRect) {
         super.init(frame:frame)
         setUpUI()
+        iconViewRotate()
     }
     //这个方法打完上面的会提示
     required init?(coder aDecoder: NSCoder) {
@@ -59,6 +65,16 @@ class WBVistorView: UIView {
 }
 
 extension WBVistorView{
+    //给iconView添加旋转动画
+    func iconViewRotate(){
+        let anim = CABasicAnimation(keyPath: "transform.rotation")
+        anim.toValue = M_PI * 2
+        anim.repeatCount = MAXFLOAT
+        anim.duration = 15
+        anim.removedOnCompletion = false    //完成后不删除
+        iconView.layer.addAnimation(anim, forKey: nil)
+    }
+    
     func setUpUI() {
         backgroundColor = UIColor.cz_colorWithHex(0xEDEDED)
         addSubview(iconView)

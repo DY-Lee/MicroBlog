@@ -46,28 +46,45 @@ extension WBMainViewController {
         composeButton.frame = tabBar.bounds.insetBy(dx: 2 * w, dy: 0)       //将button放在中间
         composeButton.addTarget(self, action: #selector(WBMainViewController.editBlogAction), forControlEvents: .TouchUpInside)
     }
-    //
+    //创建一个数组存放5个控制器的信息
     private func setupChildControllers() {
-        let array = [["clsName":"WBHomeViewController" ,"title":"首页" ,"imageName":"home"],
-                     ["clsName":"WBMessageViewController" ,"title":"消息" ,"imageName":"message_center"],
+        let array = [["clsName":"WBHomeViewController"
+                        ,"title":"首页" ,
+                    "imageName":"home",
+            "visitorInfoDic":["imageName":"","message":"关注一些人,回这里看看有什么惊喜,关注一些人,回这里看看有什么惊喜"]
+            ],
+                     ["clsName":"WBMessageViewController" ,
+                        "title":"消息" ,
+                        "imageName":"message_center",
+                        "visitorInfoDic":["imageName":"visitordiscover_image_message","message":"登录后,别人评论你的微博,发给你的消息,都会在这里收到通知"]
+            ],
                      ["clsName":"UIViewController"],//中间为了放置＋
-                     ["clsName":"WBDiscoverViewController" ,"title":"发现" ,"imageName":"discover"],
-                     ["clsName":"WBProfileViewController" ,"title":"我" ,"imageName":"profile"]]
+            
+                     ["clsName":"WBDiscoverViewController" ,
+                        "title":"发现" ,
+                        "imageName":"discover",
+                        "visitorInfoDic":["imageName":"visitordiscover_image_message","message":"登录后,最新、最热的微博尽在掌握,不会再与实事潮流擦肩而过"]
+            ],
+                     ["clsName":"WBProfileViewController" ,
+                        "title":"我" ,
+                        "imageName":"profile",
+                        "visitorInfoDic":["imageName":"visitordiscover_image_profile","message":"登录后,你的微博、相册、个人资料都会显示在这里,展示给别人"]
+        ]]
         var arrayM = [UIViewController]()
         for dict in array {
-            arrayM.append(controller(dict))
+            arrayM.append(controller(dict as! [String : AnyObject]))
         }
         viewControllers = arrayM
     }
     
     //取得字典内容
-    private func controller(dict: [String :String])->UIViewController{
+    private func controller(dict: [String :AnyObject])->UIViewController{
         //取得字典内容
-        guard let clsName = dict["clsName"] ,
-                    title = dict["title"] ,
-                    imageName = dict["imageName"],
-            
-                    cls = NSClassFromString(NSBundle.mainBundle().namespace + "." + clsName) as? UIViewController.Type
+        guard let clsName = dict["clsName"] as? String ,
+                    title = dict["title"] as? String ,
+                    imageName = dict["imageName"] as? String ,
+                    visitorInfoDict = dict["visitorInfoDic"],
+                    cls = NSClassFromString(NSBundle.mainBundle().namespace + "." + clsName) as? WBBaseViewController.Type
             else {
                 return UIViewController()
         }
@@ -76,6 +93,7 @@ extension WBMainViewController {
         let vc = cls.init()
         vc.title = title
         vc.tabBarItem.image = UIImage(named: "tabbar_"+imageName)
+        vc.visitorInfoDic = visitorInfoDict as? [String : String]
         vc.tabBarItem.selectedImage = UIImage(named:  "tabbar_"+imageName+"_highlighted")?.imageWithRenderingMode(.AlwaysOriginal)
         //设置 tabbar 颜色、字体
         vc.tabBarItem.setTitleTextAttributes(
