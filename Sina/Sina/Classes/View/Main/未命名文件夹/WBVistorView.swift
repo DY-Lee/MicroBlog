@@ -64,7 +64,7 @@ class WBVistorView: UIView {
         fatalError("init(coder:) has not been implemented")
     }
 }
-
+//ddffffffff
 extension WBVistorView{
     //给iconView添加旋转动画
     func iconViewRotate(){
