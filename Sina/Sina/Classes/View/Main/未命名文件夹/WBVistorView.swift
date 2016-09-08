@@ -57,6 +57,7 @@ class WBVistorView: UIView {
         super.init(frame:frame)
         setUpUI()
         iconViewRotate()
+        //dddddddd
     }
     //这个方法打完上面的会提示
     required init?(coder aDecoder: NSCoder) {
